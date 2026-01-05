@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <h1 class="app-title">Student Academic Dashboard</h1>
+            <div class="toggle-container">
+                <button id="btn-timetable" class="toggle-btn active" onclick="switchMode('timetable')">
+                    📅 Weekly Timetable
+                </button>
+                <button id="btn-material" class="toggle-btn" onclick="switchMode('material')">
+                    📚 Student Material
+                </button>
+                <button id="btn-theme" class="toggle-btn" onclick="toggleTheme()" title="Toggle Dark Mode">
+                    🌙
+                </button>
+            </div>
+        </header>
+
+        <!-- Status Cards Area -->
+        <section id="status-section" class="status-container fade-in">
+            <div class="status-card now-card">
+                <div class="status-label">⚡ HAPPENING NOW</div>
+                <h2 id="current-class">Loading...</h2>
+                <div id="current-details" class="status-details">—</div>
+            </div>
+            <div class="status-card next-card">
+                <div class="status-label">→ UP NEXT</div>
+                <h2 id="next-class">Loading...</h2>
+                <div id="next-details" class="status-details">—</div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Content will be injected by JS -->
+        </main>
+        <footer class="main-footer fade-in">
+            <p class="footer-title">Student Timetable – Semester II</p>
+            <p class="footer-credit">Made by ❤️ Kaushal Gupta</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
